@@ -10,7 +10,7 @@ func Show() {
 	var b bool
 	var s string
 	
-	fmt.Printf("%T - %v \n%T - %v\n%T - %v \n%T - %v \n%T - %q \n ", i, i, f, f, f2, f2, b, b, s, s)
+	fmt.Printf("%T - %v \n%T - %v\n%T - %v \n%T - %v \n%T - %q \n\n", i, i, f, f, f2, f2, b, b, s, s)
 }
 
 // %q - string com aspas
