@@ -2,16 +2,43 @@ package listas
 
 import ( "fmt" )
 
-var a [2]string
-	a[0] = "Hello"
-	a[1] = "World"
+func ArrayDeStrings(str, str1 string) [2]string{
+var arr [2]string
+	arr[0] = str
+	arr[1] = str1
 
-var array = [2]string{"Hello", "CodeSpaces"}
+	return arr
+}
 
+var ArrayDeNumeros = [2]string{"0", "1"}
+
+
+func SliceDeStrings(str, str1 string) [5]string {
+	isSlice := make([]string, 5)
+	isSlice[0] = str
+	isSlice[1] = str1
+
+	return [5]string(isSlice)
+}
+
+func NumerosPares() {
+	isPar := []int{10, 20, 30, 40, 50}
+	fmt.Println(isPar)
+
+	numeros := append(isPar, 60, 70, 80, 90, 100)
+	fmt.Println(numeros)
+}
 
 func Show() {
-	fmt.Println(array)
-	fmt.Println(array[0], array[1])
+	fmt.Println(ArrayDeStrings("Zero", "Um"))
+	
+	fmt.Println(ArrayDeNumeros)
+	fmt.Println(ArrayDeNumeros[0], ArrayDeNumeros[1])
+
+	fmt.Println(SliceDeStrings("Dez", "Vinte"))
+	NumerosPares()
+
+	fmt.Println()
 }
 
 /*
@@ -19,7 +46,6 @@ Arrays e Slices: Homogêneos
 Todos os elementos são do mesmo tipo
 [1, 2, 3] = []int
 ['a', 'b', 'c'] = []string
-
 
 ARRAYS: 
 - tamanho fixo
@@ -31,11 +57,4 @@ SLICE
 - acessamos os valores com índice
 - retornar o tamanho do slice com len()
 - fun append() add valor ao slice
-
-Maps: Heterogêneos
-Chave e valor podem ser de tipos diferentes
-{"nome": "Hulk", "idade": 300} = map[string]
-
-
-
 */
